@@ -1,0 +1,60 @@
+# You can keep your repository small and manageable with a .gitignore file.
+# Prevent build artifacts, large binary files, and other large file types
+# such as log files, media files, and executables from slowing down your workflow.
+#
+# If you need to keep large files in Bitbucket, consider introducing
+# Git Large File Storage (Git LFS) as part of your workflow.
+#
+# Learn more about .gitignore:
+#     https://www.atlassian.com/git/tutorials/saving-changes/gitignore
+# Learn more about Git LFS for large files:
+#     https://www.atlassian.com/git/tutorials/git-lfs
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Logs and Output files
+*.log
+*raw_data/
+*logs/
+*output/
+*.ini
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Translations
+*.mo
+*.pot
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# OS generated
+.DS_Store
+
+# VS Code
+*.code-workspace
+.vscode/
+
+# etc
+*~
