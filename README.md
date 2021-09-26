@@ -9,6 +9,8 @@ Simple PyQt5 python application, providing the following three Tableau Server ma
 2. Transfer ownership of Workbooks/Data Sources to another user, incl. connection credentials
 3. Download Data Sources without data extract
 
+![Tableau Server Utility Tool Screenshot](https://i.ibb.co/k0RNs8b/tableau-server-utility-tool.png)
+
 ## Setup Virtual Environment
 
 Create virtual environment
