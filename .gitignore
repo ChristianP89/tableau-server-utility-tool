@@ -56,5 +56,8 @@ venv.bak/
 *.code-workspace
 .vscode/
 
+# tableau-ui folder
+tableau-ui/
+
 # etc
 *~

@@ -13,6 +13,9 @@ from datetime import datetime
 
 import tableauserverclient as TSC
 
+TABLEAU_SERVER_PROD_URL = "https://tableau.roktinternal.com/"
+TABLEAU_SERVER_QA_URL = "https://tableau-qa.roktinternal.com/"
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -726,9 +729,9 @@ class Ui_MainWindow(object):
 
     def tableauServerLogin(self):
         if self.loginComboBox.currentText() == "Production":
-            url = "https://tableau.roktinternal.com/"
+            url = TABLEAU_SERVER_PROD_URL
         elif self.loginComboBox.currentText() == "QA":
-            url = "https://tableau-qa.roktinternal.com/"
+            url = TABLEAU_SERVER_QA_URL
         else:
             url = None
 

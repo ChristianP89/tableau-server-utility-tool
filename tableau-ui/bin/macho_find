@@ -1,4 +1,4 @@
-#!/Users/christian-peters/Rokt/tools/pyqt/tableau-ui/bin/python3
+#!/Users/christian-peters/Rokt/tools/tableau-server-utility-tool/tableau-ui/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

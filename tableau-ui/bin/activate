@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/christian-peters/Rokt/tools/pyqt/tableau-ui"
+VIRTUAL_ENV="/Users/christian-peters/Rokt/tools/tableau-server-utility-tool/tableau-ui"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
