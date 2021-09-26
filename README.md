@@ -11,7 +11,9 @@ Simple PyQt5 python application, providing the following three Tableau Server ma
 
 ![Tableau Server Utility Tool Screenshot](https://i.ibb.co/k0RNs8b/tableau-server-utility-tool.png)
 
-## Setup Virtual Environment
+## Installation
+
+### Setup Virtual Environment
 
 Create virtual environment
 ```
@@ -28,14 +30,14 @@ Install required python packages
 pip3 install -r requirements.txt
 ```
 
-## Launch Application
+### Launch Application
 
 Run:
 ```
 python3 tableau-server-utility-tool.py
 ```
 
-## Make Layout Changes
+## Layout Changes
 
 Use included `tableau-server-utility-tool.ui` [Qt Designer](https://build-system.fman.io/qt-designer-download) file to adapt the UI and add additional functionality based on your own needs.
 
