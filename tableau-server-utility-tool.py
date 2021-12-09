@@ -1005,7 +1005,13 @@ class Ui_MainWindow(object):
             pass
         elif clickedButton.text() == "&Yes":
             for job in self.extractTabTerminateJobsList:
-                self.tableauServer.jobs.cancel(job[1])
+                # print(job[1])
+                try:
+                    self.tableauServer.jobs.cancel(job[1])
+                except Exception as e:
+                    # Investigate why certain jobs can not be canceled!
+                    # print(e)
+                    pass
                 try:
                     status = self.tableauServer.jobs.get_by_id(
                         job[1]).finish_code
