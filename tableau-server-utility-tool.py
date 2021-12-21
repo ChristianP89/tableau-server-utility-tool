@@ -11,6 +11,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from datetime import datetime
 
+import requests
 import tableauserverclient as TSC
 
 TABLEAU_SERVER_PROD_URL = "https://tableau.roktinternal.com/"
@@ -1005,13 +1006,16 @@ class Ui_MainWindow(object):
             pass
         elif clickedButton.text() == "&Yes":
             for job in self.extractTabTerminateJobsList:
-                # print(job[1])
                 try:
                     self.tableauServer.jobs.cancel(job[1])
-                except Exception as e:
-                    # Investigate why certain jobs can not be canceled!
-                    # print(e)
-                    pass
+                except Exception:
+                    try:
+                        headers = {
+                            'X-Tableau-Auth': self.tableauServer.auth_token}
+                        requests.put(
+                            f"https://tableau.roktinternal.com/api/{self.tableauServer.version}/sites/{self.tableauServer.site_id}/jobs/{job[1]}", headers=headers)
+                    except Exception:
+                        pass
                 try:
                     status = self.tableauServer.jobs.get_by_id(
                         job[1]).finish_code
